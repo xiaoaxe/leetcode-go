@@ -3,6 +3,8 @@
 // time: 2020/12/14 8:11 下午
 package d0
 
+import "github.com/xiaoaxe/leetcode-go/common"
+
 func AddTwoNumbers(nums1, nums2 []int) []int {
 	var results []int
 
@@ -41,11 +43,11 @@ func AddTwoNumbers2(l1, l2 *LinkNode) *LinkNode {
 	var current = head
 	var carry = 0
 	for l1 != nil || l2 != nil {
-		x, y := ifElse(l1 != nil, l1.val, 0), ifElse(l2 != nil, l2.val, 0)
+		x, y := common.IfElse(l1 != nil, l1.val, 0), common.IfElse(l2 != nil, l2.val, 0)
 
 		sum := x + y + carry
-		val := ifElse(sum >= 10, sum-10, sum)
-		carry = ifElse(sum >= 10, 1, 0)
+		val := common.IfElse(sum >= 10, sum-10, sum)
+		carry = common.IfElse(sum >= 10, 1, 0)
 
 		node := &LinkNode{
 			val:  val,
@@ -76,9 +78,3 @@ func AddTwoNumbers2(l1, l2 *LinkNode) *LinkNode {
 	return head.next
 }
 
-func ifElse(cond bool, x, y int) int {
-	if cond {
-		return x
-	}
-	return y
-}

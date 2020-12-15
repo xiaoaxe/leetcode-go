@@ -12,7 +12,10 @@ import (
 
 func TestDemo(t *testing.T) {
 	//testTwoSum(t)
-	testAddTwoNumbers2(t)
+	//testAddTwoNumbers2(t)
+	//testGetLongestSubstringWithoutRepeating(t)
+	//testReverseInteger(t)
+	testIsPalindromeNumber(t)
 }
 
 func testTwoSum(t *testing.T) {
@@ -45,4 +48,24 @@ func testAddTwoNumbers2(t *testing.T) {
 	}
 
 	assert.Equal(t, valStr, "7001", "")
+}
+
+func testGetLongestSubstringWithoutRepeating(t *testing.T) {
+	//s := "pwwkew"
+	s := "paakea"
+	maxlen := GetLongestSubstringWithoutRepeating(s)
+	assert.Equal(t, maxlen, 3, "")
+}
+
+func testReverseInteger(t *testing.T) {
+	a := -12345
+	b := ReverseInteger2(a)
+	assert.Equal(t, b, -54321, "")
+}
+
+func testIsPalindromeNumber(t *testing.T) {
+	a := 12345
+	b := 12321
+	assert.Equal(t, IsPalindromeNumber(a), false, "")
+	assert.Equal(t, IsPalindromeNumber(b), true, "")
 }
