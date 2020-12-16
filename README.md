@@ -11,4 +11,5 @@ https://github.com/halfrost/LeetCode-Go
 1. Q6
 1. Q8
 1. Q10
-1. 
+1. Q12
+1. Q14

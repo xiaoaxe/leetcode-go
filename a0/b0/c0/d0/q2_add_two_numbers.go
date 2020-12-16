@@ -77,4 +77,3 @@ func AddTwoNumbers2(l1, l2 *LinkNode) *LinkNode {
 	// !notice!!
 	return head.next
 }
-
